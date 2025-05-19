@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amore Italia - Travel to Italy</title>
+  <style>
+    @font-face {
+      font-family: 'BeVietnam';
+      src: url('fonts/BeVietnamPro-Light.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Times New Roman', serif;
+    }
+
+    body{
+      background-color: #f6f0e3;
+      color: #333;
+    }
+
+    nav{
+      background-color: #f1ecd1;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+
+    .logo{
+        text-decoration: none;
+        color: #543110;
+        font-weight: bold;
+        font-size: x-large;
+        }
+
+    .logo:visited,
+    .logo:link,
+    .logo:hover,
+    .logo:active {
+        color: #543110;
+        }
+
+    nav a,
+        .book-button,
+        .description,
+        .sections,
+        .desc,
+        .card p {
+        font-family: GARAMOND,  serif;
+    }
+
+    nav ul{
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li{
+      margin: 0 1rem;
+    }
+
+    nav ul li a{
+      text-decoration: none;
+      color: #543110;
+      font-weight: bold;
+      transition: all 0.2s ease;
+    }
+
+    nav ul li a:hover{
+      border-bottom: 2px solid #c69c6d;
+    }
+
+    .book-button {
+      display: inline-block;
+      background-color: #302324;
+      color: #fcf5e6;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      font-family: GARAMOND, serif;
+      transition: background-color 0.3s ease;
+    }
+
+    .book-button:visited,
+    .book-button:link,
+    .book-button:hover,
+    .book-button:active {
+      background-color: #302324;
+      color: #fcf5e6;
+      text-decoration: none;
+    }
+
+    .banner{
+      background: url('4.png') no-repeat center center/cover;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+      font-size: 2.5rem;
+    }
+
+    .container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 40px;
+    }
+
+    .reviews-section {
+      text-align: center;
+      padding-top: 3rem;
+    }
+
+    .glowing {
+      font-size: 2rem;;
+      font-style: italic;
+      color:#543110;
+      margin-top: 20px;
+    }
+
+    .star-rating {
+      font-size: 24px;
+      color: gold;
+    }
+    .rating-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 10px 0;
+      font-family: "Times New Roman", Times, serif;
+      font-style: italic;
+      color: #543110
+    }
+
+    .stars {
+      color: gold;
+      font-size: 24px;
+    }
+
+    .score {
+      font-size: 20px;
+      color: #543110;
+    }
+    .rating-text {
+      font-size: 16px;
+      color: #543110;
+      font-family: 'BeVietnam', sans-serif;
+      text-align: center;
+    }
+
+    .review-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      margin-bottom: 50px;
+      gap: 20px;
+    }
+
+    .review-card {
+      background-color: #e7d8b6;
+      border-radius: 8px;
+      max-width: 300px;
+      text-align: left;
+      padding: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .review-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .review-card h3 {
+      font-size: x-large;
+      margin: 10px 0 5px;
+      font-weight: bold;
+      color: #543110;
+    }
+
+    .review-label {
+      font-family: 'Be Vietnam Pro', sans-serif;
+      font-weight: bold;
+      color: #543110;
+    }
+
+    .review-card p {
+      font-size: 14px;
+      color: #543110;
+      margin: 5px 0;
+      gap: 5px;
+      font-family: 'BeVietnam', sans-serif;
+      text-align: justify;
+    }
+
+    .review-card .rating {
+      color: gold;
+      font-size: 18px;
+    }
+
+    footer {
+      background-color: #f1ecd1;
+      color: #543110;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+      border-top: 2px solid #d4c7a5;
+      font-family: 'Times New Roman', serif;
+    }
+
+    .footer-content a {
+      color: #543110;
+      text-decoration: none;
+      margin: 0 5px;
+      font-weight: bold;
+    }
+
+    .footer-content a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="indexamore.html" class="logo"><strong><i>Amore Italia</i></strong></a>
+
+    <ul>
+        <li><a href= "itinerariesamore.html"><strong>ITINERARIES</strong></a></li>
+        <li><a href= "wheretogoamore.html"><strong>WHERE TO GO</strong></a></li>
+        <li><a href= "reviews.html"><strong>REVIEWS</strong></a></li>
+        <li><a href= "aboutitaly.html"><strong>ABOUT ITALY</strong></a></li>
+        <li><a href= "aboutus.html"><strong>ABOUT US</strong></a></li>
+      </ul>
+    <a href="bookwithamore.html" class="book-button">BOOK WITH AMORE</a>
+
+  </nav>
+
+  <div class="banner"></div>
+
+    <div class= "reviews-section">
+      <h2 class="glowing">Glowing Reviews from Our Guests</h2>
+    </div>
+    <div class="rating-row">
+      <p><div class="stars">★★★★★</div></p>
+      <div class="score">4.8/5</div>
+    </div>
+    <p class="rating-text">Average of our Guest's Ratings of our Italian tour packages, based on 50,000 reviews</p>
+
+    <div class="review-grid">
+      <div class="review-card">
+        <img src="hugo n glenn.png" alt="Hugo & Glenn">
+        <h3><i>Hugo & Glenn</i></h3>
+        <p>Our trip to Italy was incredible! The itinerary was well-planned, and we got to see both famous landmarks and hidden gems. Highly recommend this agency!
+        <br><br><span class = "review-label">YEAR:</span> 2024
+        <br><span class = "review-label">VISITED:</span> Italy
+        <br><span class = "review-label">ITINERARY:</span> Rome, Castellina in Chianti, Florence
+        <br><span class = "review-label">RATING:</span><span class="rating">★★★★★</span>
+        </p>  
+      </div>
+
+      <div class="review-card">
+        <img src="bob n marie.png" alt="Bob & Marie">
+        <h3><i>Bob & Marie</i></h3>
+        <p>The customer service was amazing! They helped customize our trip, and everything went smoothly. Rome and Venice were breathtaking—we can’t wait to book again!
+        <br><br><span class = "review-label">YEAR:</span> 2024
+        <br><span class = "review-label">VISITED:</span> Italy
+        <br><span class = "review-label">ITINERARY:</span> Venice, Florence, Rome, Sorrento
+        <br><span class = "review-label">RATING:</span><span class="rating">★★★★★</span>
+        </p>  
+        </div>
+
+      <div class="review-card">
+        <img src="marsel n budi.png" alt="Marsel & Andrew">
+        <h3><i>Marsel & Andrew</i></h3>
+        <p>Everything was perfectly organized, and we had an unforgettable experience! The guided tours were engaging, and we still had plenty of time to explore on our own. Can’t wait for our next trip!
+        <br><br><span class = "review-label">YEAR:</span> 2024
+        <br><span class = "review-label">VISITED:</span> Italy
+        <br><span class = "review-label">ITINERARY:</span> Venice, Florence, Rome, Ravello
+        <br><span class = "review-label">RATING:</span><span class="rating">★★★★★</span>
+        </p>
+      </div>
+    </div>
+  </section>
+  <footer>
+  <div class="footer-content">
+    <p>&copy; 2025 Amore Italia. All rights reserved.</p>
+    <p>Follow us on 
+      <a href="#">Instagram</a> | 
+      <a href="#">Facebook</a> | 
+      <a href="#">Twitter</a>
+    </p>
+    <p>Made by <b>Angeline Susanto 11.5</b> & <b>Audrey Michaila Winata 11.5</b></p>
+  </div>
+</footer>
+</body>
+</html>

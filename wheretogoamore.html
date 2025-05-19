@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amore Italia - Travel to Italy</title>
+  <style>
+    @font-face {
+      font-family: 'BeVietnam';
+      src: url('fonts/BeVietnamPro-Light.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Times New Roman', serif;
+    }
+
+    body{
+      background-color: #f6f0e3;
+      color: #333;
+    }
+
+    nav{
+      background-color: #f1ecd1;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+
+    .logo{
+        text-decoration: none;
+        color: #543110;
+        font-weight: bold;
+        font-size: x-large;
+        }
+
+    .logo:visited,
+    .logo:link,
+    .logo:hover,
+    .logo:active {
+        color: #543110;
+        }
+
+    nav a,
+        .book-button,
+        .description,
+        .sections,
+        .desc,
+        .card p {
+        font-family: GARAMOND,  serif;
+    }
+
+    nav ul{
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li{
+      margin: 0 1rem;
+    }
+
+    nav ul li a{
+      text-decoration: none;
+      color: #543110;
+      font-weight: bold;
+      transition: all 0.2s ease;
+    }
+
+    nav ul li a:hover{
+      border-bottom: 2px solid #c69c6d;
+    }
+
+    .book-button {
+      display: inline-block;
+      background-color: #302324;
+      color: #fcf5e6;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      font-family: GARAMOND, serif;
+      transition: background-color 0.3s ease;
+    }
+
+    .book-button:visited,
+    .book-button:link,
+    .book-button:hover,
+    .book-button:active {
+      background-color: #302324;
+      color: #fcf5e6;
+      text-decoration: none;
+    }
+
+    .banner{
+      background: url('3.png') no-repeat center center/cover;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+      font-size: 2.5rem;
+    }
+
+    .container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 40px;
+    }
+
+    .travel-section {
+      padding: 3rem 2rem;
+      background-color: #F9F4E8;
+      font-family: 'Times New Roman', serif;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-family: 'Times New Roman', serif;
+    }
+
+    .section-description {
+      max-width: 900px;
+      margin: 0 auto 2rem;
+      font-family: serif;
+      line-height: 1.6;
+      font-size: 1rem;
+      text-align: justify;
+    }
+
+    .cities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      margin-top: 3rem;
+      padding: 0 1.5rem;
+    }
+
+    .cities-card {
+      background-color: #e7d8b6;
+      text-align: left;
+      font-family: sans-serif;
+      transition: transform 0.3s ease;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 1rem;
+      flex: 1;
+    }
+
+    .cities-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .cities-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 0.75rem;
+    }
+
+    .cities-card h3 {
+      font-family: 'Times New Roman', serif;
+      color: #302324;
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .cities-card p {
+      font-size: small;
+      color: #302324;
+      line-height: 1.4;
+      text-align: justify;
+      font-family: 'BeVietnam', sans-serif;
+    }
+
+    footer {
+      background-color: #f1ecd1;
+      color: #543110;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+      border-top: 2px solid #d4c7a5;
+      font-family: 'Times New Roman', serif;
+    }
+
+    .footer-content a {
+      color: #543110;
+      text-decoration: none;
+      margin: 0 5px;
+      font-weight: bold;
+    }
+
+    .footer-content a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="indexamore.html" class="logo"><strong><i>Amore Italia</i></strong></a>
+
+    <ul>
+        <li><a href= "itinerariesamore.html"><strong>ITINERARIES</strong></a></li>
+        <li><a href= "wheretogoamore.html"><strong>WHERE TO GO</strong></a></li>
+        <li><a href= "reviews.html"><strong>REVIEWS</strong></a></li>
+        <li><a href= "aboutitaly.html"><strong>ABOUT ITALY</strong></a></li>
+        <li><a href= "aboutus.html"><strong>ABOUT US</strong></a></li>
+      </ul>
+    <a href="bookwithamore.html" class="book-button">BOOK WITH AMORE</a>
+  </nav>
+
+  <div class="banner"></div>
+
+  <div class="cities-grid">
+    <div class="cities-card">
+      <img src="rome.png" alt="Rome">
+      <h3>Rome</h3>
+      <p>Rome, the capital of Italy, combines rich ancient history with modern charm. Famous for landmarks like the Colosseum, Spanish Steps, and the Vatican, it offers world-class museums and historic sites. Beyond the tourist spots, Rome also has lively local areas that reflect its vibrant spirit.</p>
+    </div>
+
+    <div class="cities-card">
+      <img src="venice.png" alt="Venice">
+      <h3>Venice</h3>
+      <p>Venice is a uniquely romantic city built on over 100 islands linked by canals and bridges. Known for its grand palaces, historic churches, and rich museums, its car-free streets and winding alleys hide countless treasures, making it a place full of charm and endless discovery.</p>
+    </div>
+
+    <div class="cities-card">
+      <img src="florence.png" alt="Florence">
+      <h3>Florence</h3>
+      <p>Florence, the capital of Tuscany, is the birthplace of the Renaissance and rich in art, architecture, and history. Shaped by the Medici family's legacy, the city features iconic sites like Michelangelo’s David, the Duomo, and masterpieces by Botticelli and Da Vinci. It's a must-visit for art and history lovers.</p>
+    </div>
+
+    <div class="cities-card">
+      <img src="milan.png" alt="Milan">
+      <h3>Milan</h3>
+      <p>Milan, Italy’s financial and fashion capital, blends modern energy with historic elegance. Known for the stunning Duomo, the city offers diverse experiences—from La Scala opera and world-class shopping to charming cafés and iconic art. Milan is a dynamic and essential destination in any Italian journey.</p>
+    </div>
+
+    <div class="cities-card">
+      <img src="trieste.png" alt="Trieste">
+      <h3>Trieste</h3>
+      <p>Trieste, a historic port city and former Habsburg territory, is a cultural crossroads shaped by Italian, German, Croatian, and Greek influences. Now the capital of Friuli-Venezia Giulia, it’s known for its rich café culture and has the highest coffee consumption per capita in Italy.</p>
+    </div>
+
+    <div class="cities-card">
+      <img src="capri.png" alt="Capri">
+      <h3>Capri</h3>
+      <p>The island of Capri, in the Bay of Naples, is a popular destination known for its famous grottos. A true Capri experience, however, goes beyond the port, with open-air taxis taking visitors up scenic hills to the chic town of Capri or the peaceful Anacapri, offering a taste of the island's charm and natural beauty.</p>
+    </div>
+
+    <div class="cities-card">
+      <img src="naples.png" alt="Naples">
+      <h3>Naples</h3>
+      <p>Naples is a vibrant city where ancient history meets raw energy. Founded by the Greeks as Neapolis, it sits beneath Mount Vesuvius and reflects a rich cultural mix. Often skipped for nearby Pompeii, Naples rewards those who explore its lively streets and try its famous Neapolitan pizza.</p>
+    </div>
+
+    <div class="cities-card">
+      <img src="bologna.png" alt="Bologna">
+      <h3>Bologna</h3>
+      <p>Bologna, the capital of Emilia Romagna, is a city where rich history meets world-famous cuisine. Known for Europe’s oldest university and its role in Italy’s “food valley,” it offers a unique blend of intellectual heritage and culinary excellence, making it a rewarding destination for both culture and food lovers.</p>
+    </div>
+
+    <div class="cities-card">
+      <img src="verona.png" alt="Verona">
+      <h3>Verona</h3>
+      <p>Verona, a small city in northeastern Italy, gained international fame through Shakespeare's The Two Gentlemen of Verona and Romeo & Juliet. The legacy of the tragic love story attracts romantics worldwide, with Juliet's iconic balcony being the city's top attraction.</p>
+    </div>
+
+    <div class="cities-card">
+      <img src="matera.png" alt="Matera">
+      <h3>Matera</h3>
+      <p>Matera, located in southern Italy, is renowned for the Sassi, its ancient cave dwellings carved into rock. Once one of Italy’s poorest areas, it has undergone a remarkable transformation and now stands as a fascinating and historic city, drawing visitors with its unique architecture and deep sense of history.</p>
+    </div>
+
+    <div class="cities-card">
+      <img src="Aeolian Islands.png" alt="Aeolian Islands">
+      <h3>Aeolian Islands</h3>
+      <p>Sicily’s Aeolian Islands, an archipelago of volcanic islands off the northeastern shore, offers hidden gems. Lipari, the largest and busiest island, serves as a convenient base, while Salina provides a more peaceful, relaxing escape for those seeking tranquility.</p>
+    </div>
+
+    <div class="cities-card">
+      <img src="sicily.png" alt="Sicily">
+      <h3>Sicily</h3>
+      <p>Sicily, the Mediterranean’s largest island, offers incredible diversity in landscape, culture, and cuisine. From snow-capped Mount Etna to coastal towns like Palermo, each region tells its own story. With UNESCO sites, traditional foods, and strong local pride, Sicily feels more like a continent than an island.</p>
+    </div>
+  </div>
+</section>
+  <footer>
+  <div class="footer-content">
+    <p>&copy; 2025 Amore Italia. All rights reserved.</p>
+    <p>Follow us on 
+      <a href="#">Instagram</a> | 
+      <a href="#">Facebook</a> | 
+      <a href="#">Twitter</a>
+    </p>
+    <p>Made by <b>Angeline Susanto 11.5</b> & <b>Audrey Michaila Winata 11.5</b></p>
+  </div>
+</footer>
+</body>
+</html>
