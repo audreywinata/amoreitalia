@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amore Italia - Travel to Italy</title>
+  <style>
+    @font-face {
+      font-family: 'BeVietnam';
+      src: url('fonts/BeVietnamPro-Light.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+  
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Times New Roman', serif;
+    }
+
+    body{
+      background-color: #f6f0e3;
+      color: #333;
+    }
+
+    nav{
+      background-color: #f1ecd1;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+
+    .logo{
+        text-decoration: none;
+        color: #543110;
+        font-weight: bold;
+        font-size: x-large;
+        }
+
+    .logo:visited,
+    .logo:link,
+    .logo:hover,
+    .logo:active {
+        color: #543110;
+        }
+
+    nav a,
+        .book-button,
+        .description,
+        .sections,
+        .desc,
+        .card p {
+        font-family: GARAMOND,  serif;
+    }
+
+    nav ul{
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li{
+      margin: 0 1rem;
+    }
+
+    nav ul li a{
+      text-decoration: none;
+      color: #543110;
+      font-weight: bold;
+      transition: all 0.2s ease;
+    }
+
+    nav ul li a:hover{
+      border-bottom: 2px solid #c69c6d;
+    }
+
+    .book-button {
+      display: inline-block;
+      background-color: #302324;
+      color: #fcf5e6;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      font-family: GARAMOND, serif;
+      transition: background-color 0.3s ease;
+    }
+
+    .book-button:visited,
+    .book-button:link,
+    .book-button:hover,
+    .book-button:active {
+      background-color: #302324;
+      color: #fcf5e6;
+      text-decoration: none;
+    }
+
+    .banner{
+      background: url('6.png') no-repeat center center/cover;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+      font-size: 2.5rem;
+    }
+
+    .section {
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    p, li, .desc, .address, .background-text {
+    font-family: 'BeVietnam', sans-serif;
+    color: #543110;
+    }
+
+    h2, h3, .heading {
+      font-family: 'Times New Roman', serif;
+      font-style: italic;
+      color: #543110;
+      font-size: 1.5rem;
+    }
+
+    .co-founders {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin: 2rem 0;
+    }
+
+    .co-founder {
+      text-align: center;
+    }
+
+    .co-founder img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 2px solid #543110;
+    }
+
+    .background-section {
+      display: flex;
+      gap: 30px;
+      margin: 2rem 0;
+    }
+
+    .background-text {
+      flex: 1;
+      font-family: 'BeVietnam', sans-serif;
+      text-align: justify;
+      font-size: 0.9rem;
+    }
+
+    .background-image {
+      flex: 1;
+    }
+
+    .background-image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .partners {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .partners-logos {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .partners-logos img {
+      height: 100px;
+      object-fit: contain;
+      width: 120px;
+      margin: 10px;
+      filter: grayscale(10%);
+    }
+
+    .partners-logos img:hover {
+      transform: scale(1.05);
+      transition: transform 0.2s ease;
+    }
+
+    .where-to-find {
+      display: flex;
+      margin-top: 3rem;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .address {
+      flex: 1;
+      font-family: 'BeVietnam', sans-serif;
+    }
+
+    .map img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #f1ecd1;
+      color: #543110;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+      border-top: 2px solid #d4c7a5;
+      font-family: 'Times New Roman', serif;
+    }
+
+    .footer-content a {
+      color: #543110;
+      text-decoration: none;
+      margin: 0 5px;
+      font-weight: bold;
+    }
+
+    .footer-content a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="indexamore.html" class="logo"><strong><i>Amore Italia</i></strong></a>
+
+    <ul>
+        <li><a href= "itinerariesamore.html"><strong>ITINERARIES</strong></a></li>
+        <li><a href= "wheretogoamore.html"><strong>WHERE TO GO</strong></a></li>
+        <li><a href= "reviews.html"><strong>REVIEWS</strong></a></li>
+        <li><a href= "aboutitaly.html"><strong>ABOUT ITALY</strong></a></li>
+        <li><a href= "aboutus.html"><strong>ABOUT US</strong></a></li>
+      </ul>
+    <a href="bookwithamore.html" class="book-button">BOOK WITH AMORE</a>
+
+  </nav>
+  <div class="banner"></div>
+
+    <div class="section">
+    <h2 style="text-align:center; font-style:italic;">Meet our Co-Founders</h2>
+    <div class="co-founders">
+      <div class="co-founder">
+        <img src="angel.png" alt="Angeline Susanto" />
+        <p><strong>Angeline Susanto</strong></p>
+      </div>
+      <div class="co-founder">
+        <img src="audrey.png" alt="Audrey Michaila Winata" />
+        <p><strong>Audrey Michaila Winata</strong></p>
+      </div>
+    </div>
+
+    <div class="background-section">
+      <div class="background-text">
+        <h3>Background</h3>
+        <p>Since 2015, our passion for Italy has fueled every journey we create.</p>
+        <p>The idea for our agency began with a simple dream: to help travelers go beyond the typical tourist paths and discover the real Italy — its hidden alleyways, family-owned trattorias, local traditions, and breathtaking landscapes.</p>
+        <p>Founded by a group of friends who studied abroad in Italy and fell in love with its culture, food, and people, we wanted to bring that same personal and authentic experience to others.</p>
+        <p>What started as a small project organizing trips for friends and family quickly grew into a full-service travel agency, built on the values of trust, passion, and local expertise.</p>
+        <p>Today, we continue to work closely with local partners across Italy to ensure every itinerary is unforgettable — whether it's your first visit or your fifth.</p>
+      </div>
+      <div class="background-image">
+        <img src="coastline.png" alt="Italian Coastline">
+      </div>
+    </div>
+
+    <div class="partners">
+      <h3>Our Partners</h3>
+      <div class="partners-logos">
+        <img src="italia now.png" alt="Italia Now">
+        <img src="Cucina Classica.png" alt="Cucina Classica">
+        <img src="tranquillo stays.png" alt="Tranquillo Stays">
+        <img src="museipass.png" alt="MuseiPass Italia">
+        <img src="la dolce vita digest.png" alt="La Dolce Vita Digest">
+        <img src="euritalia travel channel.png" alt="Italia Travel Channel">
+      </div>
+    </div>
+
+    <div class="where-to-find">
+      <div class="address">
+        <h3>Where to Find Us</h3>
+        <p><b>Amore Travel Office:</b><br>
+        Jl. Kebayoran Baru No. 27<br>
+        Kebayoran Baru, Jakarta Selatan<br>
+        DKI Jakarta 12130<br>
+        Indonesia</p>
+
+        <p><i>Please note: visits are by appointment only.</i></p>
+        <br>
+        <p><b>Mailing Address:</b><br>
+        Amore Travel Indonesia<br>
+        P.O. Box 567<br>
+        Jalan Melati No. 10<br>
+        Kebayoran Baru, Jakarta Selatan<br>
+        DKI Jakarta 12130<br>
+        Indonesia</p>
+
+        <p><i>Please use this address for all mail correspondence.</i></p>
+      </div>
+      <div class="map">
+        <img src="address.png" alt="Our Location">
+      </div>
+    </div>
+  </div>
+
+  <footer>
+  <div class="footer-content">
+    <p>&copy; 2025 Amore Italia. All rights reserved.</p>
+    <p>Follow us on 
+      <a href="#">Instagram</a> | 
+      <a href="#">Facebook</a> | 
+      <a href="#">Twitter</a>
+    </p>
+    <p>Made by <b>Angeline Susanto 11.5</b> & <b>Audrey Michaila Winata 11.5</b></p>
+  </div>
+</footer>
+</body>
+</html>

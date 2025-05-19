@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amore Italia - Travel to Italy</title>
+  <style>
+    @font-face {
+      font-family: 'BeVietnam';
+      src: url('fonts/BeVietnamPro-Light.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Times New Roman', serif;
+    }
+
+    body{
+      background-color: #f6f0e3;
+      color: #333;
+    }
+
+    nav{
+      background-color: #f1ecd1;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+
+    .logo{
+        text-decoration: none;
+        color: #543110;
+        font-weight: bold;
+        font-size: x-large;
+        }
+
+    .logo:visited,
+    .logo:link,
+    .logo:hover,
+    .logo:active {
+        color: #543110;
+        }
+
+    nav a,
+        .book-button,
+        .description,
+        .sections,
+        .desc,
+        .card p {
+        font-family: GARAMOND,  serif;
+    }
+
+    nav ul{
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li{
+      margin: 0 1rem;
+    }
+
+    nav ul li a{
+      text-decoration: none;
+      color: #543110;
+      font-weight: bold;
+      transition: all 0.2s ease;
+    }
+
+    nav ul li a:hover{
+      border-bottom: 2px solid #c69c6d;
+    }
+
+    .book-button {
+      display: inline-block;
+      background-color: #302324;
+      color: #fcf5e6;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      font-family: GARAMOND, serif;
+      transition: background-color 0.3s ease;
+    }
+
+    .book-button:visited,
+    .book-button:link,
+    .book-button:hover,
+    .book-button:active {
+      background-color: #302324;
+      color: #fcf5e6;
+      text-decoration: none;
+    }
+
+    .banner{
+      background: url('7.png') no-repeat center center/cover;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+      font-size: 2.5rem;
+    }
+
+    .container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 40px;
+    }
+
+    .booking-form {
+      padding: 40px;
+      background-color: #e7d8b6;
+    }
+
+    .booking-form h2 {
+      font-size: 32px;
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .booking-form .intro {
+      text-align: center;
+      font-family: 'BeVietnam', sans-serif;
+      font-size: 14px;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin: 12px auto;
+      max-width: 600px;
+    }
+
+    .form-group label {
+      background-color: #7c5530;
+      color: #f1ecd1;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .form-group input {
+      padding: 10px;
+      border: 2px solid #331a00;
+      font-family: 'BeVietnam', sans-serif;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .booking-form {
+      padding: 40px;
+      background-color: #F9F4E8;
+    }
+
+    .booking-form h2 {
+      font-size: 32px;
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .booking-form .intro {
+      text-align: center;
+      font-family: 'BeVietnam', sans-serif;
+      font-size: 14px;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+    }
+
+    form {
+      background: #e7d8b6;
+      max-width: 600px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+      min-height: 500px;
+    }
+
+    h2, h3 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-family: 'Times New Roman', serif;
+      font-style: italic;
+      font-size: larger;
+      color:#543110;
+    }
+
+    .form-step {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+      position: absolute;
+      width: 100%;
+      pointer-events: none;
+    }
+
+    .form-step.active {
+      opacity: 1;
+      visibility: visible;
+      position: relative;
+      pointer-events: auto;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 16px;
+    }
+
+    label {
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="range"],
+    input[type="number"],
+    select,
+    textarea {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .form-inline-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .form-inline-group label {
+      font-weight: normal;
+    }
+
+    .checkbox-group, .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    output {
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    .step-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #844414;
+      color: white;
+      transition: background 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #6d370e;
+    }
+
+    @media (max-width: 500px) {
+      .step-buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    footer {
+      background-color: #f1ecd1;
+      color: #543110;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+      border-top: 2px solid #d4c7a5;
+      font-family: 'Times New Roman', serif;
+    }
+
+    .footer-content a {
+      color: #543110;
+      text-decoration: none;
+      margin: 0 5px;
+      font-weight: bold;
+    }
+
+    .footer-content a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<script>
+  function showStep(stepId) {
+    const currentStep = document.querySelector('.form-step.active');
+    const nextStep = document.getElementById(stepId);
+
+    if (currentStep !== nextStep) {
+      currentStep.classList.remove('active');
+
+      setTimeout(() => {
+        nextStep.classList.add('active');
+      }, 300);
+    }
+  }
+
+  function nextStep(stepNumber) {
+    showStep('step-' + stepNumber);
+  }
+
+  function prevStep(stepNumber) {
+    showStep('step-' + stepNumber);
+  }
+
+document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("Form submitted successfully!");
+});
+
+</script>
+<body>
+  <nav>
+    <a href="indexamore.html" class="logo"><strong><i>Amore Italia</i></strong></a>
+
+    <ul>
+        <li><a href= "itinerariesamore.html"><strong>ITINERARIES</strong></a></li>
+        <li><a href= "wheretogoamore.html"><strong>WHERE TO GO</strong></a></li>
+        <li><a href= "reviews.html"><strong>REVIEWS</strong></a></li>
+        <li><a href= "aboutitaly.html"><strong>ABOUT ITALY</strong></a></li>
+        <li><a href= "aboutus.html"><strong>ABOUT US</strong></a></li>
+      </ul>
+    <a href="bookwithamore.html" class="book-button">BOOK WITH AMORE</a>
+  </nav>
+
+  <div class="banner"></div>
+
+  <section class="booking-form">
+    <h2>Start now!</h2>
+    <p class="intro">
+      Whether you're booking a honeymoon, staycation or corporate retreat, having Amore in your corner makes life easier. Their expertise, coupled with our tech-powered platform, makes for a seamless trip-planning experience.<br>
+      Smart travelers use Amore. Be the smart one.
+    </p>
+  
+    <form id="travelForm">
+      <div class="form-step active" id="step-1">
+        <h3>Step 1: Personal Information</h3>
+        <div class="form-group">
+          <label for="full-name">Full Name:</label>
+          <input type="text" id="full-name" name="full-name" required>
+        </div>
+        <div class="form-group">
+          <label for="contact">Contact Number:</label>
+          <input type="tel" id="contact" name="contact" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="step-buttons">
+          <button type="button" onclick="nextStep(2)">Next</button>
+        </div>
+      </div>
+
+      <div class="form-step" id="step-2">
+        <h3>Step 2: Travel Information</h3>
+        <div class="form-group">
+          <label for="start-date">Start Date:</label>
+          <input type="date" id="start-date" name="start-date">
+        </div>
+        <div class="form-group">
+          <label for="end-date">End Date:</label>
+          <input type="date" id="end-date" name="end-date">
+        </div>
+        <div class="form-group">
+          <label for="budget">Trip Budget (Rupiah):</label>
+          <input type="range" id="budget" name="budget" min="25000000" max="150000000" step="1000000" oninput="budgetOutput.value = budget.value">
+          <output id="budgetOutput">500</output>
+        </div>
+        <div class="form-group">
+          <label for="occasion">Number of People:</label>
+          <input type="number" id="people" name="people">
+        </div>
+        <div class="form-group">
+          <label for="occasion">Occasion for Travel:</label>
+          <input type="text" id="occasion" name="occasion" placeholder="e.g. Honeymoon, Vacation">
+        </div>
+        <div class="step-buttons">
+          <button type="button" onclick="prevStep(1)">Back</button>
+          <button type="button" onclick="nextStep(3)">Next</button>
+        </div>
+      </div>
+
+        <div class="form-step" id="step-3">
+    <h3>Step 3: Preferences</h3>
+    <div class="form-group">
+      <label for="hotel-rating">Hotel Rating:</label>
+      <select id="hotel-rating" name="hotel-rating">
+        <option value="">--Select--</option>
+        <option value="3">3-Star</option>
+        <option value="4">4-Star</option>
+        <option value="5">5-Star</option>
+        <option value="any">Any</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="room-type">Room Type:</label>
+      <select id="room-type" name="room-type">
+        <option value="">--Select--</option>
+        <option value="single">Single</option>
+        <option value="double">Double</option>
+        <option value="suite">Suite</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="diet">Dietary Restrictions:</label>
+      <input type="text" id="diet" name="diet" placeholder="e.g. Vegetarian, Vegan">
+    </div>
+    <div class="form-group">
+      <label>Preferred Activities:</label>
+      <input type="checkbox" name="activities" value="sightseeing"> Sightseeing<br>
+      <input type="checkbox" name="activities" value="shopping"> Shopping<br>
+      <input type="checkbox" name="activities" value="adventure"> Adventure<br>
+      <input type="checkbox" name="activities" value="food"> Culinary<br>
+      <input type="checkbox" name="activities" value="relax"> Relaxation<br>
+    </div>
+    <div class="form-group">
+      <label>Have you traveled with us before?</label>
+      <input type="radio" name="traveled-before" value="yes"> Yes
+      <input type="radio" name="traveled-before" value="no"> No
+    </div>
+    <div class="form-group">
+      <label for="referral">How did you hear about us?</label>
+      <select id="referral" name="referral">
+        <option value="">--Select--</option>
+        <option value="friend">Friend/Family</option>
+        <option value="social">Social Media</option>
+        <option value="ads">Online Ads</option>
+        <option value="search">Search Engine</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="notes">Anything else we should know?</label>
+      <textarea id="notes" name="notes" rows="4" cols="40"></textarea>
+    </div>
+    <div class="step-buttons">
+      <button type="button" onclick="prevStep(2)">Back</button>
+      <button type="submit">Submit</button>
+    </div>
+  </div>
+  </form>
+  </section>
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Amore Italia. All rights reserved.</p>
+      <p>Follow us on 
+        <a href="#">Instagram</a> | 
+        <a href="#">Facebook</a> | 
+        <a href="#">Twitter</a>
+      </p>
+      <p>Made by <b>Angeline Susanto 11.5</b> & <b>Audrey Michaila Winata 11.5</b></p>
+  </div>
+</footer>
+</body>
+</html>

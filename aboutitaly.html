@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amore Italia - Travel to Italy</title>
+  <style>
+    @font-face {
+      font-family: 'BeVietnam';
+      src: url('fonts/BeVietnamPro-Light.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Times New Roman', serif;
+    }
+
+    body{
+      background-color: #f6f0e3;
+      color: #333;
+    }
+
+    nav{
+      background-color: #f1ecd1;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+
+    .logo{
+        text-decoration: none;
+        color: #543110;
+        font-weight: bold;
+        font-size: x-large;
+        }
+
+    .logo:visited,
+    .logo:link,
+    .logo:hover,
+    .logo:active {
+        color: #543110;
+        }
+
+    nav a,
+        .book-button,
+        .description,
+        .sections,
+        .desc,
+        .card p {
+        font-family: GARAMOND,  serif;
+    }
+
+    nav ul{
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li{
+      margin: 0 1rem;
+    }
+
+    nav ul li a{
+      text-decoration: none;
+      color: #543110;
+      font-weight: bold;
+      transition: all 0.2s ease;
+    }
+
+    nav ul li a:hover{
+      border-bottom: 2px solid #c69c6d;
+    }
+
+    .book-button {
+      display: inline-block;
+      background-color: #302324;
+      color: #fcf5e6;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      font-family: GARAMOND, serif;
+      transition: background-color 0.3s ease;
+    }
+
+    .book-button:visited,
+    .book-button:link,
+    .book-button:hover,
+    .book-button:active {
+      background-color: #302324;
+      color: #fcf5e6;
+      text-decoration: none;
+    }
+
+    .banner{
+      background: url('5.png') no-repeat center center/cover;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+      font-size: 2.5rem;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    h1, h2, h3, h4, h5, h6, .heading {
+      font-family: 'Times New Roman', serif;
+      font-style: italic;
+      color: #543110;
+    }
+
+    p, li, ul, ol, .desc, .address, .text-block {
+      font-family: 'BeVietnam', sans-serif;
+      color: #543110;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-family: 'Times New Roman', serif;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+      font-size: 1rem;
+    }
+
+    .content-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .text-block {
+      flex: 1;
+      font-size: 1rem;
+      text-align: justify;
+    }
+
+    .text-block h3 {
+      font-family: 'Times New Roman', serif;
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+
+    .image-block {
+      flex: 1;
+    }
+
+    .image-block img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    ul {
+      margin-top: 0.5rem;
+      margin-left: 1.2rem;
+    }
+    
+    footer {
+      background-color: #f1ecd1;
+      color: #543110;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+      border-top: 2px solid #d4c7a5;
+      font-family: 'Times New Roman', serif;
+    }
+
+    .footer-content a {
+      color: #543110;
+      text-decoration: none;
+      margin: 0 5px;
+      font-weight: bold;
+    }
+
+    .footer-content a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="indexamore.html" class="logo"><strong><i>Amore Italia</i></strong></a>
+
+    <ul>
+        <li><a href= "itinerariesamore.html"><strong>ITINERARIES</strong></a></li>
+        <li><a href= "wheretogoamore.html"><strong>WHERE TO GO</strong></a></li>
+        <li><a href= "reviews.html"><strong>REVIEWS</strong></a></li>
+        <li><a href= "aboutitaly.html"><strong>ABOUT ITALY</strong></a></li>
+        <li><a href= "aboutus.html"><strong>ABOUT US</strong></a></li>
+      </ul>
+    <a href="bookwithamore.html" class="book-button">BOOK WITH AMORE</a>
+  </nav>
+
+  <div class="banner"></div>
+  <div class="section">
+    <h2>Welcome to Italy</h2>
+    <p class="intro">
+      Italy is a country of timeless beauty, rich culture, and unforgettable experiences. Located in Southern Europe,
+      Italy is known for its historic cities, world-renowned cuisine, stunning landscapes, and warm, passionate people.
+    </p>
+
+    <div class="content-row">
+      <div class="image-block">
+        <img src="history & culture.png" alt="Historic City View">
+      </div>
+      <div class="text-block">
+        <h3>A Land of History & Culture</h3>
+        <p>
+          From the Roman Empire to the Renaissance, Italy has shaped much of the Western world. Walk through the ruins of
+          the Colosseum in Rome, gaze at Michelangelo’s masterpiece in the Sistine Chapel, or stroll through the cobbled
+          streets of Florence — every corner tells a story.
+        </p>
+        <p>Famous historical landmarks:</p>
+        <ul>
+          <li>The Colosseum (Rome)</li>
+          <li>The Leaning Tower of Pisa</li>
+          <li>St. Peter’s Basilica (Vatican City)</li>
+          <li>The canals of Venice</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content-row">
+      <div class="text-block">
+        <h3>A Taste of italy-landscape</h3>
+        <p>
+          Italian food is loved all over the world, and there’s nothing like tasting it where it was born. Each region
+          has its own traditional dishes, from fresh pasta in Bologna to Neapolitan pizza in Naples.
+        </p>
+        <p>Don’t miss:</p>
+        <ul>
+          <li>Pizza Margherita</li>
+          <li>Spaghetti Carbonara</li>
+          <li>Gelato</li>
+          <li>Espresso</li>
+        </ul>
+      </div>
+      <div class="image-block">
+        <img src="taste of italy.png" alt="Italian Pasta Dish">
+      </div>
+    </div>
+
+    <div class="content-row">
+      <div class="image-block">
+        <img src="italy landscapes.png" alt="Italian Countryside">
+      </div>
+      <div class="text-block">
+        <h3>Landscapes That Take Your Breath Away</h3>
+        <p>
+          Italy offers a variety of breathtaking scenery — rolling hills in Tuscany, dramatic cliffs in the Amalfi Coast,
+          snow-capped mountains in the Alps, and serene lakes like Lake Como.
+        </p>
+        <p>Popular natural destinations:</p>
+        <ul>
+          <li>Cinque Terre</li>
+          <li>Amalfi Coast</li>
+          <li>Lake Garda</li>
+          <li>The Dolomites</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Amore Italia. All rights reserved.</p>
+      <p>Follow us on 
+        <a href="#">Instagram</a> | 
+        <a href="#">Facebook</a> | 
+        <a href="#">Twitter</a>
+      </p>
+      <p>Made by <b>Angeline Susanto 11.5</b> & <b>Audrey Michaila Winata 11.5</b></p>
+  </div>
+</footer>
+</body>
+</html>
