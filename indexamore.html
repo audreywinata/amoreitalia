@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amore Italia - Travel to Italy</title>
+  <style>
+    @font-face {
+      font-family: 'BeVietnam';
+      src: url('fonts/BeVietnamPro-Light.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Times New Roman', serif;
+    }
+
+    body{
+      background-color: #f6f0e3;
+      color: #333;
+    }
+
+    nav{
+      background-color: #f1ecd1;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+
+    .logo{
+        text-decoration: none;
+        color: #543110;
+        font-weight: bold;
+        font-size: x-large;
+        }
+
+    .logo:visited,
+    .logo:link,
+    .logo:hover,
+    .logo:active {
+        color: #543110;
+        }
+
+    nav a,
+        .book-button,
+        .description,
+        .sections,
+        .desc,
+        .card p {
+        font-family: GARAMOND,  serif;
+    }
+
+    nav ul{
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li{
+      margin: 0 1rem;
+    }
+
+    nav ul li a{
+      text-decoration: none;
+      color: #543110;
+      font-weight: bold;
+      transition: all 0.2s ease;
+    }
+
+    nav ul li a:hover{
+      border-bottom: 2px solid #c69c6d;
+    }
+
+    .book-button {
+      display: inline-block;
+      background-color: #302324;
+      color: #fcf5e6;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      font-family: GARAMOND, serif;
+      transition: background-color 0.3s ease;
+    }
+
+    .book-button:visited,
+    .book-button:link,
+    .book-button:hover,
+    .book-button:active {
+      background-color: #302324;
+      color: #fcf5e6;
+      text-decoration: none;
+    }
+
+    .banner{
+      background: url('1.png') no-repeat center center/cover;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+      font-size: 2.5rem;
+    }
+
+    .container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 40px;
+    }
+    
+    .description {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .description,
+    .video {
+        height: 200px;
+    }
+    .text{
+      flex: 1;
+    }
+
+    .video{
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 30px;
+    }
+
+    .video iframe{
+      width: 100%;
+      height: 250px;
+      border: none;
+    }
+
+    .sections{
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .section-cards{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1.5rem;
+      gap: 1.5rem;
+    }
+
+    .card{
+      background-color: #e7d8b6;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 1rem;
+      flex: 1;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img{
+      width: 100%;
+      border-radius: 10px;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card h3{
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .card p{
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #000000;
+      text-align: justify;
+      font-family: 'BeVietnam', sans-serif;
+    }
+
+    .desc{
+        text-align: justify;
+        font-size: medium;
+        font-family: 'BeVietnam', sans-serif;
+    }
+
+    .heading{
+        color: #302324;
+    }
+
+    footer {
+      background-color: #f1ecd1;
+      color: #543110;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+      border-top: 2px solid #d4c7a5;
+      font-family: 'Times New Roman', serif;
+    }
+
+    .footer-content a {
+      color: #543110;
+      text-decoration: none;
+      margin: 0 5px;
+      font-weight: bold;
+    }
+
+    .footer-content a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="logo"><strong><i>Amore Italia</i></strong></a>
+
+    <ul>
+      <li><a href= "itinerariesamore.html"><strong>ITINERARIES</strong></a></li>
+      <li><a href= "wheretogoamore.html"><strong>WHERE TO GO</strong></a></li>
+      <li><a href= "reviews.html"><strong>REVIEWS</strong></a></li>
+      <li><a href= "aboutitaly.html"><strong>ABOUT ITALY</strong></a></li>
+      <li><a href= "aboutus.html"><strong>ABOUT US</strong></a></li>
+    </ul>
+    <a href="bookwithamore.html" class="book-button">BOOK WITH AMORE</a>
+
+  </nav>
+
+  <div class="banner"></div>
+
+  <div class="container">
+    <div class="text">
+      <h3 class= "heading"><i>Italy Custom Tour Packages</i></h3>
+      <p class= "desc">
+        Thanks to our dedicated team in Italy we can take you beyond the basics to discover the country’s hidden gems.
+        Whether it’s your first Italian vacation or your tenth, we can create the perfect Italy itinerary for you.
+        With its varied climate zones, landscapes, and captivating cities, Italy has something for everyone.
+        That variety can be overwhelming. That’s where we come in. Our Italy experts will craft a perfectly balanced
+        custom Italy tour just for you.
+      </p>
+    </div>
+    <div class="video">
+      <iframe src="italy travel vlog_ travel with me to rome, amalfi coast, capri, and florence!.mp4" title="Video About Italy" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="sections">
+    <h2 class= "heading"><i>Discover the Many Sides of Italy</i></h2>
+    <div class="section-cards">
+      <div class="card">
+        <img src="romantic getaway.jpg" alt="Romantic Getaways"/>
+        <h3 class= "heading">Romantic Getaways</h3>
+        <p>Explore the most enchanting cities in Italy—Venice, Verona, and more—for couples seeking unforgettable memories.</p>
+      </div>
+      <div class="card">
+        <img src="culinary tours.jpg" alt="Culinary Tours"/>
+        <h3 class= "heading">Culinary Tours</h3>
+        <p>Taste your way through Italy with food-focused journeys in Bologna, Parma, Naples, and Rome.</p>
+      </div>
+      <div class="card">
+        <img src="hidden gems.jpg" alt="Hidden Gems"/>
+        <h3 class= "heading">Hidden Gems</h3>
+        <p>Step off the beaten path to discover lesser-known towns like Matera and Trulli, rich in charm and history.</p>
+      </div>
+      <div class="card">
+        <img src="art & history.jpg" alt="Art and History"/>
+        <h3 class= "heading">Art &amp; History</h3>
+        <p>Walk through the Renaissance in Florence, the ruins of Rome, and the timeless beauty of Italy’s architecture.</p>
+      </div>
+    </div>
+  </div>
+  <footer>
+  <div class="footer-content">
+    <p>&copy; 2025 Amore Italia. All rights reserved.</p>
+    <p>Follow us on 
+      <a href="#">Instagram</a> | 
+      <a href="#">Facebook</a> | 
+      <a href="#">Twitter</a>
+    </p>
+    <p>Made by <b>Angeline Susanto 11.5</b> & <b>Audrey Michaila Winata 11.5</b></p>
+  </div>
+</footer>
+</body>
+</html>
